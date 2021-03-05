@@ -42,22 +42,22 @@ router.get('/', (req: Request, res: Response) => {
 	`);
 })
 
-router.get('/login', (req: Request, res: Response) => {
-	res.send(`
-	<form method="POST">
-	<div>
-		<label for="email">Email</label>
-		<input name="email" />
-	</div>
-	<div>
-		<label for="password">Password</label>
-		<input name="password" type="password" />
-	</div>
-	<button>Submit</button>
-	</form>
-	`)
-})
-
+// router.get('/login', (req: Request, res: Response) => {
+// 	res.send(`
+// 	<form method="POST">
+// 	<div>
+// 		<label for="email">Email</label>
+// 		<input name="email" />
+// 	</div>
+// 	<div>
+// 		<label for="password">Password</label>
+// 		<input name="password" type="password" />
+// 	</div>
+// 	<button>Submit</button>
+// 	</form>
+// 	`)
+// })
+//
 router.get('/logout', (req: Request, res: Response) => {
 	if (req.session?.loggedIn === true) {
 		req.session.loggedIn = undefined
